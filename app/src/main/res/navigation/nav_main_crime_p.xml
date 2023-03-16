@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main_crime_p"
+    app:startDestination="@id/homeCrimeFragment">
+
+    <fragment
+        android:id="@+id/homeCrimeFragment"
+        android:name="com.example.navcomponents.HomeCrimeFragment"
+        android:label="fragment_home_crime"
+        tools:layout="@layout/fragment_home_crime" />
+    <fragment
+        android:id="@+id/registerFragmentPersonalDetails"
+        android:name="com.example.navcomponents.RegisterFragmentPersonalDetails"
+        android:label="RegisterFragmentPersonalDetails"
+        tools:layout="@layout/fragment_register_personal_info"/>
+    <fragment
+        android:id="@+id/registerFragmentCrimeDetails"
+        android:name="com.example.navcomponents.RegisterFragmentCrimeDetails"
+        android:label="RegisterFragmentCrimeDetails"
+        tools:layout="@layout/fragment_register_crime_details"/>
+</navigation>
