@@ -3,49 +3,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeCrimeFragment">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Register Crimes With this Application"
+        android:text="Find Crime"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_total_crimes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:paddingHorizontal="10dp"
+        android:hint="Enter name"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_register_new_crime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register New Crime"
-        android:layout_marginTop="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/btn_view_all_crimes"
+        android:id="@+id/btn_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View All Crimes"
+        android:layout_marginTop="20dp"
+        android:text="Search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_register_new_crime" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_total_crimes" />
 
     <Button
-        android:id="@+id/btn_find_a_crime"
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Find A Crime"
+        android:text="Back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_view_all_crimes" />
-
+        app:layout_constraintTop_toBottomOf="@+id/btn_search" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

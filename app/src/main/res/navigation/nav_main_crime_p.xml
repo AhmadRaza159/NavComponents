@@ -9,15 +9,66 @@
         android:id="@+id/homeCrimeFragment"
         android:name="com.example.navcomponents.HomeCrimeFragment"
         android:label="fragment_home_crime"
-        tools:layout="@layout/fragment_home_crime" />
+        tools:layout="@layout/fragment_home_crime" >
+        <action
+            android:id="@+id/action_homeCrimeFragment_to_registerFragmentPersonalDetails"
+            app:destination="@id/registerFragmentPersonalDetails" />
+        <action
+            android:id="@+id/action_homeCrimeFragment_to_fragmentViewAllCrime"
+            app:destination="@id/fragmentViewAllCrime" />
+        <action
+            android:id="@+id/action_homeCrimeFragment_to_fragmentFindACrime"
+            app:destination="@id/fragmentFindACrime" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragmentPersonalDetails"
         android:name="com.example.navcomponents.RegisterFragmentPersonalDetails"
         android:label="RegisterFragmentPersonalDetails"
-        tools:layout="@layout/fragment_register_personal_info"/>
+        tools:layout="@layout/fragment_register_personal_info">
+        <action
+            android:id="@+id/action_registerFragmentPersonalDetails_to_registerFragmentCrimeDetails"
+            app:destination="@id/registerFragmentCrimeDetails" />
+        <action
+            android:id="@+id/action_registerFragmentPersonalDetails_to_homeCrimeFragment"
+            app:destination="@id/homeCrimeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragmentCrimeDetails"
         android:name="com.example.navcomponents.RegisterFragmentCrimeDetails"
         android:label="RegisterFragmentCrimeDetails"
-        tools:layout="@layout/fragment_register_crime_details"/>
+        tools:layout="@layout/fragment_register_crime_details">
+        <action
+            android:id="@+id/action_registerFragmentCrimeDetails_to_homeCrimeFragment"
+            app:destination="@id/homeCrimeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentViewAllCrime"
+        android:name="com.example.navcomponents.FragmentViewAllCrime"
+        android:label="FragmentViewAllCrime"
+        tools:layout="@layout/fragment_view_all_crime">
+        <action
+            android:id="@+id/action_fragmentViewAllCrime_to_homeCrimeFragment"
+            app:destination="@id/homeCrimeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFindACrime"
+        android:name="com.example.navcomponents.FragmentFindACrime"
+        android:label="FragmentFindACrime"
+        tools:layout="@layout/fragment_find_crime">
+        <action
+            android:id="@+id/action_fragmentFindACrime_to_fragmentDetailsCrime"
+            app:destination="@id/fragmentDetailsCrime" />
+        <action
+            android:id="@+id/action_fragmentFindACrime_to_homeCrimeFragment"
+            app:destination="@id/homeCrimeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetailsCrime"
+        android:name="com.example.navcomponents.FragmentDetailsCrime"
+        android:label="FragmentDetailsCrime"
+        tools:layout="@layout/fragment_details_crime">
+        <action
+            android:id="@+id/action_fragmentDetailsCrime_to_homeCrimeFragment"
+            app:destination="@id/homeCrimeFragment" />
+    </fragment>
 </navigation>
