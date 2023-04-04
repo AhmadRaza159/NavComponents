@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_main_crime_p"
+    android:label="Crime"
     app:startDestination="@id/homeCrimeFragment">
 
     <fragment
         android:id="@+id/homeCrimeFragment"
         android:name="com.example.navcomponents.HomeCrimeFragment"
-        android:label="fragment_home_crime"
-        tools:layout="@layout/fragment_home_crime" >
+        android:label="Home"
+        tools:layout="@layout/fragment_home_crime">
         <action
             android:id="@+id/action_homeCrimeFragment_to_registerFragmentPersonalDetails"
             app:destination="@id/registerFragmentPersonalDetails" />
@@ -23,7 +24,7 @@
     <fragment
         android:id="@+id/registerFragmentPersonalDetails"
         android:name="com.example.navcomponents.RegisterFragmentPersonalDetails"
-        android:label="RegisterFragmentPersonalDetails"
+        android:label="Personal Detail"
         tools:layout="@layout/fragment_register_personal_info">
         <action
             android:id="@+id/action_registerFragmentPersonalDetails_to_registerFragmentCrimeDetails"
@@ -32,7 +33,7 @@
     <fragment
         android:id="@+id/registerFragmentCrimeDetails"
         android:name="com.example.navcomponents.RegisterFragmentCrimeDetails"
-        android:label="RegisterFragmentCrimeDetails"
+        android:label="{name}'s Crime"
         tools:layout="@layout/fragment_register_crime_details">
         <argument
             android:name="name"
@@ -47,12 +48,12 @@
     <fragment
         android:id="@+id/fragmentViewAllCrime"
         android:name="com.example.navcomponents.FragmentViewAllCrime"
-        android:label="FragmentViewAllCrime"
-        tools:layout="@layout/fragment_view_all_crime"/>
+        android:label="All Crimes"
+        tools:layout="@layout/fragment_view_all_crime" />
     <fragment
         android:id="@+id/fragmentFindACrime"
         android:name="com.example.navcomponents.FragmentFindACrime"
-        android:label="FragmentFindACrime"
+        android:label="Find Crime"
         tools:layout="@layout/fragment_find_crime">
         <action
             android:id="@+id/action_fragmentFindACrime_to_fragmentDetailsCrime"
@@ -61,6 +62,6 @@
     <fragment
         android:id="@+id/fragmentDetailsCrime"
         android:name="com.example.navcomponents.FragmentDetailsCrime"
-        android:label="FragmentDetailsCrime"
-        tools:layout="@layout/fragment_details_crime"/>
+        android:label="Details"
+        tools:layout="@layout/fragment_details_crime" />
 </navigation>
